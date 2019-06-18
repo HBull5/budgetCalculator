@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+html {
+	background-color: green;
+}
+
+form {
+	text-align: center;
+	background-color: white;
+	margin-right: 31em;
+	margin-left: 31em;
+}
+
+form > p {
+	color: grey;
+	opacity: 25%;
+}
+
+ h1 {
+ 	text-align: center;
+ 	color: black;
+ }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Budget Calculator!</title>
+	<link rel="stylesheet" type="text/css" href="budgetStyler.css">
+</head>
+<body>
+	<br/>
+	<br/>
+		<h1>$Budget Calculator 9000!$</h1>
+	<br/>
+	<br/>
+	 <form> 
+	 		Enter Hourly Wage: <input type="text" id="hourlyWage" name="hourlyWage" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter Hours Per Week: <input type="text" id="hoursPerWeek" name="hoursPerWeek" onfocus="this.value=''" value="No Decimals Please!"/><br/> 
+	 		
+	 		Enter Monthly Rent: <input type="text" id="rent" name="rent" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 	
+	 		Enter deuction 1: <input type="text" id="deduction1" name="deduction1" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 	
+	 		Enter deuction 2: <input type="text" id="deduction2" name="deduction2" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 	
+	 		Enter deuction 3: <input type="text" id="deduction3" name="deduction3" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter deuction 4: <input type="text" id="deduction4" name="deduction4" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter deuction 5: <input type="text" id="deduction5" name="deduction5" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter deuction 6: <input type="text" id="deduction6" name="deduction6" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter deuction 7: <input type="text" id="deduction7" name="deduction7" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter deuction 8: <input type="text" id="deduction8" name="deduction8" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter deuction 9: <input type="text" id="deduction9" name="deduction9" onfocus="this.value=''" value="Include Decimal Places!"/><br/>
+	 		
+	 		Enter deuction 10: <input type="text" id="deduction10" name="deduction10" onfocus="this.value=''" value="Include Decimal Places!"/><br/>	
+	 		
+			<input type="button" value="Calculate!" onclick="Calculator()"/>  
+	 </form>
+<script>
+function Calculator () {
+	var hourlyWage = document.getElementById("hourlyWage").value;
+	var hoursPerWeek = document.getElementById("hoursPerWeek").value;
+	var rent = document.getElementById("rent").value;
+	var deduction1 = document.getElementById("deduction1").value;
+	var deduction2 = document.getElementById("deduction2").value;
+	var deduction3 = document.getElementById("deduction3").value;
+	var deduction4 = document.getElementById("deduction4").value;
+	var deduction5 = document.getElementById("deduction5").value;
+	var deduction6 = document.getElementById("deduction6").value;
+	var deduction7 = document.getElementById("deduction7").value;
+	var deduction8 = document.getElementById("deduction8").value;
+	var deduction9 = document.getElementById("deduction9").value;
+	var deduction10 = document.getElementById("deduction10").value;
+	
+	
+	var income = parseFloat(hourlyWage) * parseInt(hoursPerWeek)* 4;
+	var deductions = parseFloat(deduction1) + parseFloat(deduction2) + parseFloat(deduction3) + parseFloat(deduction4) + parseFloat(deduction5) + parseFloat(deduction6) + parseFloat(deduction7) + parseFloat(deduction8) + parseFloat(deduction9) + parseFloat(deduction10) + parseFloat(rent);
+	var disposableIncome = income - deductions;
+	alert("$" + disposableIncome);
+};
+</script>
+</body>
+</html>
